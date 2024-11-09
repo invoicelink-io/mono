@@ -16,6 +16,8 @@
 	export let styles: InvoiceStyles;
 	export let data: FullInvoice;
 
+	let stringIssueDate: string = data.issueDate.toLocaleDateString('en-ZA').replaceAll('/', '-');
+
 	$: {
 		data.subtotal = parseFloat(
 			data.lineItems
@@ -28,6 +30,8 @@
 		data.tax = parseFloat(((data.subtotal * data.taxPercentage) / 100).toFixed(2));
 
 		data.total = parseFloat((data.subtotal + data.tax).toFixed(2));
+
+		data.issueDate = new Date(stringIssueDate);
 	}
 
 	$: console.log(data);
@@ -53,11 +57,7 @@
 		</div>
 		<Spacer divider={'hidden'} spacing={styles.baseSpacing} color={styles.baseDividerColor} />
 		<div class="grid grid-cols-1 leading-6">
-			<IssueDate
-				{editable}
-				align={styles.issueDateAlign}
-				date={data.issueDate.toLocaleDateString('en-ZA').replaceAll('/', '-')}
-			/>
+			<IssueDate {editable} align={styles.issueDateAlign} bind:date={stringIssueDate} />
 			<Spacer
 				divider={styles.baseDivider}
 				spacing={styles.baseSpacing}

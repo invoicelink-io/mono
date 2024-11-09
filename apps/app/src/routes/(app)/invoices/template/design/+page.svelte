@@ -25,6 +25,7 @@
 	invoice.client.name = 'Client Name';
 	invoice.sendersAddress = displayAddress;
 	invoice.client.address = displayAddress;
+	invoice.issueDate = new Date();
 
 	const { form, message, enhance } = superForm(data.form, {
 		resetForm: false,

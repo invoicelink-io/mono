@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { twMerge } from 'tailwind-merge';
 	export let editable: boolean = false;
-	export let date = new Date().toLocaleDateString('en-ZA').replaceAll('/', '-');
+	export let date: string = new Date().toLocaleDateString('en-ZA').replaceAll('/', '-');
 	export let align = 'text-right';
 </script>
 

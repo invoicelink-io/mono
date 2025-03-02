@@ -3,14 +3,15 @@
   "version": "1.1.0",
   "description": "The invoicelink.io monorepo",
   "private": true,
-  "packageManager": "pnpm@10.5.2",
+  "packageManager": "pnpm@9.9.0",
   "engines": {
     "node": "22.x",
-    "pnpm": "10"
+    "pnpm": "9"
   },
   "scripts": {
     "build": "turbo run build",
     "build:api": "docker build -t invoicelink/api:latest .",
+    "start": "turbo run --filter app start",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "turbo run format",

@@ -9,6 +9,7 @@
 		"dev": "vite dev --port 5173 --mode development",
 		"build": "vite build",
 		"preview": "vite preview",
+		"start": "node apps/app/build",
 		"test": "npm run test:integration && npm run test:unit",
 		"prepare": "svelte-kit sync && pnpm dlx prisma generate --schema ./node_modules/@invoicelink/db/schema.prisma",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -56,10 +57,10 @@
 		"vitest": "^2.0.5"
 	},
 	"type": "module",
-	"packageManager": "pnpm@10.5.2",
+	"packageManager": "pnpm@9.9.0",
 	"engines": {
 		"node": "22.x",
-		"pnpm": "10"
+		"pnpm": "9"
 	},
 	"dependencies": {
 		"@floating-ui/dom": "^1.6.8",

@@ -2,10 +2,8 @@ buildImage = 'ghcr.io/railwayapp/nixpacks:latest'
 
 [phases.setup]
 nixPkgs = [
-    "nodejs_22",
+    "nodejs_20",
     "pnpm-9_x",
     "openssl",
 ]
 
-[phases.install]
-cmds = ["npm install -g corepack", "corepack enable", "corepack prepare pnpm@9 --activate", "pnpm install"]

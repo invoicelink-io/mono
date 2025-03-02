@@ -56,10 +56,10 @@
 		"vitest": "^2.0.5"
 	},
 	"type": "module",
-	"packageManager": "pnpm@9.9.0",
+	"packageManager": "pnpm@10.5.2",
 	"engines": {
-		"node": "20.x",
-		"pnpm": "9"
+		"node": "22.x",
+		"pnpm": "10"
 	},
 	"dependencies": {
 		"@floating-ui/dom": "^1.6.8",

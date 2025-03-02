@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "The invoicelink.io monorepo",
   "private": true,
-  "packageManager": "pnpm@9.9.0",
+  "packageManager": "pnpm@10.5.2",
   "engines": {
-    "node": "20.x",
-    "pnpm": "9"
+    "node": "22.x",
+    "pnpm": "10"
   },
   "scripts": {
     "build": "turbo run build",

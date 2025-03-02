@@ -13,23 +13,23 @@ importers:
         version: 2.27.7
     devDependencies:
       turbo:
-        specifier: ^2.0.13
-        version: 2.0.14
+        specifier: ^2.4.4
+        version: 2.4.4
 
   apps/api:
     dependencies:
       '@elysiajs/cors':
         specifier: ^1.1.0
-        version: 1.1.0(elysia@1.1.11(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4))
+        version: 1.1.0(elysia@1.2.24(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4))
       '@elysiajs/swagger':
         specifier: ^1.1.0
-        version: 1.1.1(elysia@1.1.11(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4))
+        version: 1.1.1(elysia@1.2.24(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4))
       cloudinary:
         specifier: ^2.4.0
         version: 2.4.0
       elysia:
         specifier: latest
-        version: 1.1.11(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4)
+        version: 1.2.24(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4)
       puppeteer:
         specifier: ^23.0.2
         version: 23.1.1(typescript@5.5.4)
@@ -39,7 +39,7 @@ importers:
         version: link:../../packages/config
       bun-types:
         specifier: latest
-        version: 1.1.26
+        version: 1.2.4
       eslint:
         specifier: ^9.8.0
         version: 9.9.1(jiti@1.21.6)
@@ -2024,6 +2024,7 @@ packages:
 
   acorn-import-assertions@1.9.0:
     resolution: {integrity: sha512-cmMwop9x+8KFhxvKrKfPYmN6/pKTYYHBqLa0DfvVZcKMJWNyWLnaqND7dx/qn66R7ewM1UX5XMaDVP5wlVTaVA==}
+    deprecated: package has been renamed to acorn-import-attributes
     peerDependencies:
       acorn: ^8
 
@@ -2229,8 +2230,8 @@ packages:
     resolution: {integrity: sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==}
     engines: {node: '>=6'}
 
-  bun-types@1.1.26:
-    resolution: {integrity: sha512-n7jDe62LsB2+WE8Q8/mT3azkPaatKlj/2MyP6hi3mKvPz9oPpB6JW/Ll6JHtNLudasFFuvfgklYSE+rreGvBjw==}
+  bun-types@1.2.4:
+    resolution: {integrity: sha512-nDPymR207ZZEoWD4AavvEaa/KZe/qlrbMSchqpQwovPZCKc7pwMoENjEtHgMKaAjJhy+x6vfqSBA1QU3bJgs0Q==}
 
   cac@6.7.14:
     resolution: {integrity: sha512-b6Ilus+c3RrdDk+JhLKUAQfzzgLEPy6wcXqS7f/xe1EETvsDP6GORG7SFuOs6cID5YkqchW/LXZbX5bc8j7ZcQ==}
@@ -2350,6 +2351,10 @@ packages:
   cookie@0.6.0:
     resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
     engines: {node: '>= 0.6'}
+
+  cookie@1.0.2:
+    resolution: {integrity: sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA==}
+    engines: {node: '>=18'}
 
   cosmiconfig@9.0.0:
     resolution: {integrity: sha512-itvL5h8RETACmOTFc4UfIyB2RfEHi71Ax6E/PivVxq9NseKbOWpeyHEOIbmAw1rs8Ak0VursQNww7lf7YtUwzg==}
@@ -2477,10 +2482,10 @@ packages:
   electron-to-chromium@1.5.13:
     resolution: {integrity: sha512-lbBcvtIJ4J6sS4tb5TLp1b4LyfCdMkwStzXPyAgVgTRAsep4bvrAGaBOP7ZJtQMNJpSQ9SqG4brWOroNaQtm7Q==}
 
-  elysia@1.1.11:
-    resolution: {integrity: sha512-nw0dccaRSpjSEDbU7utaI35jPeHtogtvLPr7SlgK56IK2HmN5Peywmw5oIiKJJIlo78Wa8rlA+F0WpZo5sDnBA==}
+  elysia@1.2.24:
+    resolution: {integrity: sha512-z849iAFdOCLd/a/ra3dtOmMd9jN4ow1G5Enq5RRRfheu/HEcO61cnwSaj0EScbT91pDiVbozhzqxF/K6b6amEw==}
     peerDependencies:
-      '@sinclair/typebox': '>= 0.32.0'
+      '@sinclair/typebox': '>= 0.34.0'
       openapi-types: '>= 12.0.0'
       typescript: '>= 5.0.0'
     peerDependenciesMeta:
@@ -2654,9 +2659,6 @@ packages:
     resolution: {integrity: sha512-GDhU9ntwuKyGXdZBUgTIe+vXnWj0fppUEtMDL0+idd5Sta8TGpHssn/eusA9mrPr9qNDym6SxAYZjNvCn/9RBg==}
     engines: {node: '>= 10.17.0'}
     hasBin: true
-
-  fast-decode-uri-component@1.0.1:
-    resolution: {integrity: sha512-WKgKWg5eUxvRZGwW8FvfbaH7AXSh2cL+3j5fMGzUMCxWBJ3dV3a7Wz8y2f/uQ0e3B6WmodD3oS54jTQ9HVTIIg==}
 
   fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
@@ -3179,6 +3181,9 @@ packages:
     resolution: {integrity: sha512-UERzLsxzllchadvbPs5aolHh65ISpKpM+ccLbOJ8/vvpBKmAWf+la7dXFy7Mr0ySHbdHrFv5kGFCUHHe6GFEmw==}
     engines: {node: '>= 4.0.0'}
 
+  memoirist@0.3.0:
+    resolution: {integrity: sha512-wR+4chMgVPq+T6OOsk40u9Wlpw1Pjx66NMNiYxCQQ4EUJ7jDs3D9kTCeKdBOkvAiqXlHLVJlvYL01PvIJ1MPNg==}
+
   memoize-weak@1.0.2:
     resolution: {integrity: sha512-gj39xkrjEw7nCn4nJ1M5ms6+MyMlyiGmttzsqAUsAKn6bYKwuTHh/AO3cKPF8IBrTIYTxb0wWXFs3E//Y8VoWQ==}
 
@@ -3392,9 +3397,11 @@ packages:
 
   oslo@1.2.0:
     resolution: {integrity: sha512-OoFX6rDsNcOQVAD2gQD/z03u4vEjWZLzJtwkmgfRF+KpQUXwdgEXErD7zNhyowmHwHefP+PM9Pw13pgpHMRlzw==}
+    deprecated: Package is no longer supported. Please see https://oslojs.dev for the successor project.
 
   oslo@1.2.1:
     resolution: {integrity: sha512-HfIhB5ruTdQv0XX2XlncWQiJ5SIHZ7NHZhVyHth0CSZ/xzge00etRyYy/3wp/Dsu+PkxMC+6+B2lS/GcKoewkA==}
+    deprecated: Package is no longer supported. Please see https://oslojs.dev for the successor project.
 
   outdent@0.5.0:
     resolution: {integrity: sha512-/jHxFIzoMXdqPzTaCpFzAAWhpkSjZPF4Vsn6jAfNpmbH/ymsmd7Qc6VE9BGn0L6YMj6uwpQLxCECpus4ukKS9Q==}
@@ -4249,38 +4256,38 @@ packages:
   tslib@2.7.0:
     resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
 
-  turbo-darwin-64@2.0.14:
-    resolution: {integrity: sha512-kwfDmjNwlNfvtrvT29+ZBg5n1Wvxl891bFHchMJyzMoR0HOE9N1NSNdSZb9wG3e7sYNIu4uDkNk+VBEqJW0HzQ==}
+  turbo-darwin-64@2.4.4:
+    resolution: {integrity: sha512-5kPvRkLAfmWI0MH96D+/THnDMGXlFNmjeqNRj5grLKiry+M9pKj3pRuScddAXPdlxjO5Ptz06UNaOQrrYGTx1g==}
     cpu: [x64]
     os: [darwin]
 
-  turbo-darwin-arm64@2.0.14:
-    resolution: {integrity: sha512-m3LXYEshCx3wc4ZClM6gb01KYpFmtjQ9IBF3A7ofjb6ahux3xlYZJZ3uFCLAGHuvGLuJ3htfiPbwlDPTdknqqw==}
+  turbo-darwin-arm64@2.4.4:
+    resolution: {integrity: sha512-/gtHPqbGQXDFhrmy+Q/MFW2HUTUlThJ97WLLSe4bxkDrKHecDYhAjbZ4rN3MM93RV9STQb3Tqy4pZBtsd4DfCw==}
     cpu: [arm64]
     os: [darwin]
 
-  turbo-linux-64@2.0.14:
-    resolution: {integrity: sha512-7vBzCPdoTtR92SNn2JMgj1FlMmyonGmpMaQdgAB1OVYtuQ6NVGoh7/lODfaILqXjpvmFSVbpBIDrKOT6EvcprQ==}
+  turbo-linux-64@2.4.4:
+    resolution: {integrity: sha512-SR0gri4k0bda56hw5u9VgDXLKb1Q+jrw4lM7WAhnNdXvVoep4d6LmnzgMHQQR12Wxl3KyWPbkz9d1whL6NTm2Q==}
     cpu: [x64]
     os: [linux]
 
-  turbo-linux-arm64@2.0.14:
-    resolution: {integrity: sha512-jwH+c0bfjpBf26K/tdEFatmnYyXwGROjbr6bZmNcL8R+IkGAc/cglL+OToqJnQZTgZvH7uDGbeSyUo7IsHyjuA==}
+  turbo-linux-arm64@2.4.4:
+    resolution: {integrity: sha512-COXXwzRd3vslQIfJhXUklgEqlwq35uFUZ7hnN+AUyXx7hUOLIiD5NblL+ETrHnhY4TzWszrbwUMfe2BYWtaPQg==}
     cpu: [arm64]
     os: [linux]
 
-  turbo-windows-64@2.0.14:
-    resolution: {integrity: sha512-w9/XwkHSzvLjmioo6cl3S1yRfI6swxsV1j1eJwtl66JM4/pn0H2rBa855R0n7hZnmI6H5ywLt/nLt6Ae8RTDmw==}
+  turbo-windows-64@2.4.4:
+    resolution: {integrity: sha512-PV9rYNouGz4Ff3fd6sIfQy5L7HT9a4fcZoEv8PKRavU9O75G7PoDtm8scpHU10QnK0QQNLbE9qNxOAeRvF0fJg==}
     cpu: [x64]
     os: [win32]
 
-  turbo-windows-arm64@2.0.14:
-    resolution: {integrity: sha512-XaQlyYk+Rf4xS5XWCo8XCMIpssgGGy8blzLfolN6YBp4baElIWMlkLZHDbGyiFmCbNf9I9gJI64XGRG+LVyyjA==}
+  turbo-windows-arm64@2.4.4:
+    resolution: {integrity: sha512-403sqp9t5sx6YGEC32IfZTVWkRAixOQomGYB8kEc6ZD+//LirSxzeCHCnM8EmSXw7l57U1G+Fb0kxgTcKPU/Lg==}
     cpu: [arm64]
     os: [win32]
 
-  turbo@2.0.14:
-    resolution: {integrity: sha512-00JjdCMD/cpsjP0Izkjcm8Oaor5yUCfDwODtaLb+WyblyadkaDEisGhy3Dbd5az9n+5iLSPiUgf+WjPbns6MRg==}
+  turbo@2.4.4:
+    resolution: {integrity: sha512-N9FDOVaY3yz0YCOhYIgOGYad7+m2ptvinXygw27WPLQvcZDl3+0Sa77KGVlLSiuPDChOUEnTKE9VJwLSi9BPGQ==}
     hasBin: true
 
   type-check@0.4.0:
@@ -4846,13 +4853,13 @@ snapshots:
     dependencies:
       postcss-selector-parser: 6.1.2
 
-  '@elysiajs/cors@1.1.0(elysia@1.1.11(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4))':
+  '@elysiajs/cors@1.1.0(elysia@1.2.24(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4))':
     dependencies:
-      elysia: 1.1.11(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4)
+      elysia: 1.2.24(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4)
 
-  '@elysiajs/swagger@1.1.1(elysia@1.1.11(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4))':
+  '@elysiajs/swagger@1.1.1(elysia@1.2.24(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4))':
     dependencies:
-      elysia: 1.1.11(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4)
+      elysia: 1.2.24(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4)
       lodash.clonedeep: 4.5.0
       openapi-types: 12.1.3
 
@@ -6466,7 +6473,7 @@ snapshots:
 
   builtin-modules@3.3.0: {}
 
-  bun-types@1.1.26:
+  bun-types@1.2.4:
     dependencies:
       '@types/node': 20.12.14
       '@types/ws': 8.5.12
@@ -6594,6 +6601,8 @@ snapshots:
 
   cookie@0.6.0: {}
 
+  cookie@1.0.2: {}
+
   cosmiconfig@9.0.0(typescript@5.5.4):
     dependencies:
       env-paths: 2.2.1
@@ -6699,11 +6708,11 @@ snapshots:
 
   electron-to-chromium@1.5.13: {}
 
-  elysia@1.1.11(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4):
+  elysia@1.2.24(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4):
     dependencies:
       '@sinclair/typebox': 0.33.7
-      cookie: 0.6.0
-      fast-decode-uri-component: 1.0.1
+      cookie: 1.0.2
+      memoirist: 0.3.0
     optionalDependencies:
       openapi-types: 12.1.3
       typescript: 5.5.4
@@ -6956,8 +6965,6 @@ snapshots:
       '@types/yauzl': 2.10.3
     transitivePeerDependencies:
       - supports-color
-
-  fast-decode-uri-component@1.0.1: {}
 
   fast-deep-equal@3.1.3: {}
 
@@ -7489,6 +7496,8 @@ snapshots:
     dependencies:
       fs-monkey: 1.0.6
     optional: true
+
+  memoirist@0.3.0: {}
 
   memoize-weak@1.0.2: {}
 
@@ -8541,32 +8550,32 @@ snapshots:
 
   tslib@2.7.0: {}
 
-  turbo-darwin-64@2.0.14:
+  turbo-darwin-64@2.4.4:
     optional: true
 
-  turbo-darwin-arm64@2.0.14:
+  turbo-darwin-arm64@2.4.4:
     optional: true
 
-  turbo-linux-64@2.0.14:
+  turbo-linux-64@2.4.4:
     optional: true
 
-  turbo-linux-arm64@2.0.14:
+  turbo-linux-arm64@2.4.4:
     optional: true
 
-  turbo-windows-64@2.0.14:
+  turbo-windows-64@2.4.4:
     optional: true
 
-  turbo-windows-arm64@2.0.14:
+  turbo-windows-arm64@2.4.4:
     optional: true
 
-  turbo@2.0.14:
+  turbo@2.4.4:
     optionalDependencies:
-      turbo-darwin-64: 2.0.14
-      turbo-darwin-arm64: 2.0.14
-      turbo-linux-64: 2.0.14
-      turbo-linux-arm64: 2.0.14
-      turbo-windows-64: 2.0.14
-      turbo-windows-arm64: 2.0.14
+      turbo-darwin-64: 2.4.4
+      turbo-darwin-arm64: 2.4.4
+      turbo-linux-64: 2.4.4
+      turbo-linux-arm64: 2.4.4
+      turbo-windows-64: 2.4.4
+      turbo-windows-arm64: 2.4.4
 
   type-check@0.4.0:
     dependencies:

@@ -2,7 +2,7 @@ buildImage = 'ghcr.io/railwayapp/nixpacks:latest'
 
 [phases.setup]
 nixPkgs = [
-    "nodejs_20",
+    "nodejs_22",
     "pnpm-9_x",
     "openssl",
 ]

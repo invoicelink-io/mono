@@ -25,7 +25,12 @@
         "SENDGRID_CONTACT_LIST_ID",
         "POSTGRES_PRISMA_URL",
         "POSTGRES_URL_NON_POOLING"
-      ]
+      ],
+      "dependsOn": ["@invoicelink/ui#build"]
+    },
+    "pay#build": {
+      "env": ["POSTGRES_PRISMA_URL", "POSTGRES_URL_NON_POOLING"],
+      "dependsOn": ["@invoicelink/ui#build"]
     },
     "api#build": {
       "env": ["BROWSERLESS_API_TOKEN"]

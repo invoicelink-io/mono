@@ -20,16 +20,16 @@ importers:
     dependencies:
       '@elysiajs/cors':
         specifier: ^1.1.0
-        version: 1.1.0(elysia@1.2.24(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4))
+        version: 1.1.0(elysia@1.1.0(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4))
       '@elysiajs/swagger':
         specifier: ^1.1.0
-        version: 1.1.1(elysia@1.2.24(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4))
+        version: 1.1.1(elysia@1.1.0(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4))
       cloudinary:
         specifier: ^2.4.0
         version: 2.4.0
       elysia:
-        specifier: latest
-        version: 1.2.24(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4)
+        specifier: 1.1.0
+        version: 1.1.0(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4)
       puppeteer:
         specifier: ^23.0.2
         version: 23.1.1(typescript@5.5.4)
@@ -2355,10 +2355,6 @@ packages:
     resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
     engines: {node: '>= 0.6'}
 
-  cookie@1.0.2:
-    resolution: {integrity: sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA==}
-    engines: {node: '>=18'}
-
   cosmiconfig@9.0.0:
     resolution: {integrity: sha512-itvL5h8RETACmOTFc4UfIyB2RfEHi71Ax6E/PivVxq9NseKbOWpeyHEOIbmAw1rs8Ak0VursQNww7lf7YtUwzg==}
     engines: {node: '>=14'}
@@ -2485,10 +2481,10 @@ packages:
   electron-to-chromium@1.5.13:
     resolution: {integrity: sha512-lbBcvtIJ4J6sS4tb5TLp1b4LyfCdMkwStzXPyAgVgTRAsep4bvrAGaBOP7ZJtQMNJpSQ9SqG4brWOroNaQtm7Q==}
 
-  elysia@1.2.24:
-    resolution: {integrity: sha512-z849iAFdOCLd/a/ra3dtOmMd9jN4ow1G5Enq5RRRfheu/HEcO61cnwSaj0EScbT91pDiVbozhzqxF/K6b6amEw==}
+  elysia@1.1.0:
+    resolution: {integrity: sha512-31ZjLpGi6HK/jMDDUYlXX4sbAOQY/+YsuJ5gfjWWQa7jDejmAVElb3zi8PFWS69SPso+ukb1zeXtQf0AG6XZUw==}
     peerDependencies:
-      '@sinclair/typebox': '>= 0.34.0'
+      '@sinclair/typebox': '>= 0.32.0'
       openapi-types: '>= 12.0.0'
       typescript: '>= 5.0.0'
     peerDependenciesMeta:
@@ -2663,6 +2659,9 @@ packages:
     engines: {node: '>= 10.17.0'}
     hasBin: true
 
+  fast-decode-uri-component@1.0.1:
+    resolution: {integrity: sha512-WKgKWg5eUxvRZGwW8FvfbaH7AXSh2cL+3j5fMGzUMCxWBJ3dV3a7Wz8y2f/uQ0e3B6WmodD3oS54jTQ9HVTIIg==}
+
   fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
 
@@ -2678,6 +2677,9 @@ packages:
 
   fast-levenshtein@2.0.6:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==}
+
+  fast-querystring@1.1.2:
+    resolution: {integrity: sha512-g6KuKWmFXc0fID8WWH0jit4g0AGBoJhCkJMb1RmbsSEUNvQ+ZC8D6CUZ+GtF8nMzSPXnhiePyyqqipzNNEnHjg==}
 
   fastparse@1.1.2:
     resolution: {integrity: sha512-483XLLxTVIwWK3QTrMGRqUfUpoOs/0hbQrl2oz4J0pAcm3A3bu84wxTFqGqkJzewCLdME38xJLJAxBABfQT8sQ==}
@@ -3183,9 +3185,6 @@ packages:
   memfs@3.5.3:
     resolution: {integrity: sha512-UERzLsxzllchadvbPs5aolHh65ISpKpM+ccLbOJ8/vvpBKmAWf+la7dXFy7Mr0ySHbdHrFv5kGFCUHHe6GFEmw==}
     engines: {node: '>= 4.0.0'}
-
-  memoirist@0.3.0:
-    resolution: {integrity: sha512-wR+4chMgVPq+T6OOsk40u9Wlpw1Pjx66NMNiYxCQQ4EUJ7jDs3D9kTCeKdBOkvAiqXlHLVJlvYL01PvIJ1MPNg==}
 
   memoize-weak@1.0.2:
     resolution: {integrity: sha512-gj39xkrjEw7nCn4nJ1M5ms6+MyMlyiGmttzsqAUsAKn6bYKwuTHh/AO3cKPF8IBrTIYTxb0wWXFs3E//Y8VoWQ==}
@@ -4856,13 +4855,13 @@ snapshots:
     dependencies:
       postcss-selector-parser: 6.1.2
 
-  '@elysiajs/cors@1.1.0(elysia@1.2.24(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4))':
+  '@elysiajs/cors@1.1.0(elysia@1.1.0(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4))':
     dependencies:
-      elysia: 1.2.24(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4)
+      elysia: 1.1.0(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4)
 
-  '@elysiajs/swagger@1.1.1(elysia@1.2.24(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4))':
+  '@elysiajs/swagger@1.1.1(elysia@1.1.0(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4))':
     dependencies:
-      elysia: 1.2.24(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4)
+      elysia: 1.1.0(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4)
       lodash.clonedeep: 4.5.0
       openapi-types: 12.1.3
 
@@ -6604,8 +6603,6 @@ snapshots:
 
   cookie@0.6.0: {}
 
-  cookie@1.0.2: {}
-
   cosmiconfig@9.0.0(typescript@5.5.4):
     dependencies:
       env-paths: 2.2.1
@@ -6711,11 +6708,12 @@ snapshots:
 
   electron-to-chromium@1.5.13: {}
 
-  elysia@1.2.24(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4):
+  elysia@1.1.0(@sinclair/typebox@0.33.7)(openapi-types@12.1.3)(typescript@5.5.4):
     dependencies:
       '@sinclair/typebox': 0.33.7
-      cookie: 1.0.2
-      memoirist: 0.3.0
+      cookie: 0.6.0
+      fast-decode-uri-component: 1.0.1
+      fast-querystring: 1.1.2
     optionalDependencies:
       openapi-types: 12.1.3
       typescript: 5.5.4
@@ -6969,6 +6967,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  fast-decode-uri-component@1.0.1: {}
+
   fast-deep-equal@3.1.3: {}
 
   fast-fifo@1.3.2: {}
@@ -6984,6 +6984,10 @@ snapshots:
   fast-json-stable-stringify@2.1.0: {}
 
   fast-levenshtein@2.0.6: {}
+
+  fast-querystring@1.1.2:
+    dependencies:
+      fast-decode-uri-component: 1.0.1
 
   fastparse@1.1.2: {}
 
@@ -7499,8 +7503,6 @@ snapshots:
     dependencies:
       fs-monkey: 1.0.6
     optional: true
-
-  memoirist@0.3.0: {}
 
   memoize-weak@1.0.2: {}
 

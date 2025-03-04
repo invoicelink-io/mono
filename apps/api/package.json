@@ -14,7 +14,7 @@
 		"@elysiajs/cors": "^1.1.0",
 		"@elysiajs/swagger": "^1.1.0",
 		"cloudinary": "^2.4.0",
-		"elysia": "latest",
+		"elysia": "1.1.0",
 		"puppeteer": "^23.0.2"
 	},
 	"devDependencies": {

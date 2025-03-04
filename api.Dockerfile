@@ -1,4 +1,4 @@
-FROM node:20-slim AS base
+FROM node:22-slim AS base
 RUN apt-get update && apt-get install curl -y && apt-get install unzip -y
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
@@ -28,7 +28,7 @@ COPY apps/api/package.json ./
 COPY apps/api/src ./src
 COPY apps/api/tsconfig.json ./
 
-ENV NODE_ENV production
+ENV NODE_ENV=production
 
 EXPOSE 3000
 

@@ -1,16 +1,16 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { formatCurrency } from '@invoicelink/lib';
-	import type { Invoice, QuickLink } from '@prisma/client';
+	import type { Invoice, QuickLink, InvoiceStyles } from '@prisma/client';
 
 	export let data: Invoice | QuickLink;
-	export let invoiceType: string = 'Invoice';
+	export let styles: InvoiceStyles;
 </script>
 
 <div id="table-footer" class="grid grid-cols-3 sm:grid-cols-4">
 	<div class="col-span-2 flex flex-col items-end leading-6 sm:col-span-3">
 		<span class="font-normal">Subtotal</span>
-		<span class="font-normal">{invoiceType === 'VAT Invoice' ? `VAT` : `Tax`}</span>
+		<span class="font-normal">{styles.taxType}</span>
 		<span class="font-semibold">Total</span>
 	</div>
 	<div class="flex flex-col leading-6">

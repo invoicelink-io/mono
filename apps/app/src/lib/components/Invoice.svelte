@@ -106,7 +106,7 @@
 				{/each}
 			</div>
 			<Spacer divider={'hidden'} spacing={styles.baseSpacing} color={styles.baseDividerColor} />
-			<Total invoiceType={styles.invoiceType} {data} />
+			<Total {data} {styles} />
 		</div>
 		<Spacer
 			divider={styles.baseDivider}

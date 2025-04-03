@@ -138,7 +138,7 @@ export const actions: Actions = {
 			return message(form, 'Failed to update bank details');
 		}
 	},
-	updateVAT: async ({ request }) => {
+	updateVAT: async ({ request, locals }) => {
 		const form = await superValidate(request, zod(vatSchema));
 
 		if (!form.valid) {
@@ -148,7 +148,7 @@ export const actions: Actions = {
 		try {
 			await prisma.user.update({
 				where: {
-					id: form.data.id
+					id: locals.user?.id
 				},
 				data: {
 					vatNumber: form.data.vatNumber

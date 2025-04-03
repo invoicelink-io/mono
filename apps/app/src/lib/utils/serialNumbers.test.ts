@@ -1,5 +1,6 @@
-import { expect, test } from 'vitest';
+import { expect, test, describe, beforeEach, afterEach } from 'vitest';
 import { initializeSerialNumber, incrementSerialNumber } from './serialNumbers';
+import { SerialType } from '@prisma/client';
 
 test('initializeSerialNumber should return a string with the correct format for invoice type', () => {
 	const result = initializeSerialNumber('INVOICE');
@@ -33,4 +34,43 @@ test('incrementSerialNumber should handle serial numbers with different number l
 	const serial = 'INV-2022-00099';
 	const result = incrementSerialNumber(serial);
 	expect(result).toBe('INV-2022-00100');
+});
+
+describe('Serial Number Generation', () => {
+	let originalDate: DateConstructor;
+
+	beforeEach(() => {
+		// Store the original Date constructor
+		originalDate = global.Date;
+	});
+
+	afterEach(() => {
+		// Restore the original Date after each test
+		global.Date = originalDate;
+	});
+
+	test('should use current year in serial number', () => {
+		const currentYear = new Date().getFullYear();
+		const result = initializeSerialNumber(SerialType.INVOICE);
+		expect(result).toBe(`INV-${currentYear}-00001`);
+	});
+
+	test('should use correct year when year changes', () => {
+		// Mock the Date to return a specific year
+		const mockDate = new Date('2026-01-01');
+		global.Date = class extends Date {
+			constructor() {
+				super();
+				return mockDate;
+			}
+		} as DateConstructor;
+
+		const result = initializeSerialNumber(SerialType.INVOICE);
+		expect(result).toBe('INV-2026-00001');
+	});
+
+	test('should match the expected format', () => {
+		const result = initializeSerialNumber(SerialType.INVOICE);
+		expect(result).toMatch(/^INV-\d{4}-00001$/);
+	});
 });

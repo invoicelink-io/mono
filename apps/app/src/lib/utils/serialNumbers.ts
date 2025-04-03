@@ -12,11 +12,8 @@ export function incrementSerialNumber(serial: string) {
 	const splitSerial = serial.split('-');
 	const number = parseInt(splitSerial[splitSerial.length - 1]);
 	const incrementedNumber = number + 1;
-	const newSerial = `${splitSerial[0]}-${splitSerial[1]}-${pad(
-		incrementedNumber.toString(),
-		'0',
-		5
-	)}`;
+	const year = new Date().getFullYear();
+	const newSerial = `${splitSerial[0]}-${year}-${pad(incrementedNumber.toString(), '0', 5)}`;
 	return newSerial;
 }
 

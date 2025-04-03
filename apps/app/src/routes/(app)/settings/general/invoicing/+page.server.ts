@@ -83,7 +83,7 @@ export const load = (async ({ parent, locals, cookies }) => {
 }) satisfies PageServerLoad;
 
 export const actions: Actions = {
-	updateAddress: async ({ request }) => {
+	updateAddress: async ({ request, locals }) => {
 		const form = await superValidate(request, zod(addressSchema));
 
 		if (!form.valid) {

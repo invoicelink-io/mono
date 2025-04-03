@@ -93,7 +93,8 @@ export const actions: Actions = {
 		try {
 			await prisma.address.update({
 				where: {
-					id: form.data.id
+					id: form.data.id,
+					userId: locals.user?.id
 				},
 				data: {
 					line1: form.data.line1,
@@ -119,7 +120,8 @@ export const actions: Actions = {
 		try {
 			await prisma.bankAccount.update({
 				where: {
-					id: form.data.id
+					id: form.data.id,
+					userId: locals.user?.id
 				},
 				data: {
 					accountHolder: form.data.accountHolder,

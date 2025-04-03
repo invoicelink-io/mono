@@ -109,7 +109,7 @@ export const actions: Actions = {
 			return message(form, 'Failed to update address');
 		}
 	},
-	updateBank: async ({ request }) => {
+	updateBank: async ({ request, locals }) => {
 		const form = await superValidate(request, zod(bankSchema));
 
 		if (!form.valid) {

@@ -27,5 +27,6 @@ export const schema = z.object({
 	lineItemDividerColor: z.string(),
 	logoSrc: z.string().nullable(),
 	logoAlt: z.string(),
-	previewSrc: z.string().nullable()
+	previewSrc: z.string().nullable(),
+	taxType: z.string()
 });

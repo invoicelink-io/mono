@@ -37,6 +37,7 @@ export const defaultStyles: InvoiceStyles = {
   logoSrc: null,
   logoAlt: "invoicelink.io",
   previewSrc: null,
+  taxType: "Tax",
 };
 
 export const defaultLineItem: LineItem = {

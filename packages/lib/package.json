@@ -20,8 +20,8 @@
     "javascript-time-ago": "^2.5.10",
     "nanoid": "^5.0.7",
     "zod": "^3.23.8",
-    "prisma": "^5.18.0",
-    "@prisma/client": "^5.18.0"
+    "prisma": "6.5.0",
+    "@prisma/client": "6.5.0"
   },
   "dependencies": {
     "@invoicelink/db": "workspace:*",

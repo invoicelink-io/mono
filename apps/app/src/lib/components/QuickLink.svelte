@@ -76,7 +76,7 @@
 				/>
 			</tbody>
 			<Spacer divider={'hidden'} spacing={styles.baseSpacing} color={styles.baseDividerColor} />
-			<Total invoiceType={styles.invoiceType} {data} />
+			<Total {data} {styles} />
 		</table>
 	</div>
 </div>

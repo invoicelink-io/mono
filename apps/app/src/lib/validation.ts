@@ -28,3 +28,8 @@ export const bankSchema = z.object({
 	bankName: z.string(),
 	branchCode: z.string()
 });
+
+export const vatSchema = z.object({
+	id: z.string(),
+	vatNumber: z.string().nullable()
+});

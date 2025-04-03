@@ -22,7 +22,9 @@
 		userId: ''
 	};
 	invoice.user.name = 'Your Name';
+	invoice.user.vatNumber = '123456789'; // Example VAT number for sender
 	invoice.client.name = 'Client Name';
+	invoice.client.vatNumber = '987654321'; // Example VAT number for client
 	invoice.sendersAddress = displayAddress;
 	invoice.client.address = displayAddress;
 	invoice.issueDate = new Date();

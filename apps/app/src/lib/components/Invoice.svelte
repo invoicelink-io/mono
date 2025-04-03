@@ -68,11 +68,13 @@
 					name={data.user.name ?? ''}
 					data={data.sendersAddress}
 					align={styles.senderAddressAlign}
+					vatNumber={data.user.vatNumber}
 				/>
 				<Address
 					name={data.client.name}
 					data={data.client.address}
 					align={styles.recipientAddressAlign}
+					vatNumber={data.client.vatNumber}
 				/>
 			</div>
 		</div>

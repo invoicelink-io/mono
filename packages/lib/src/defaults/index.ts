@@ -97,7 +97,7 @@ export const defaultInvoice: FullInvoice = {
   taxPercentage: 0,
   tax: 0,
   total: 100,
-  serial: "INV-2023-00001",
+  serial: `INV-${new Date().getFullYear()}-00001`,
   status: "PENDING",
   sendersAddressId: "",
   clientId: "",

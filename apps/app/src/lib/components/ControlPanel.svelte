@@ -13,6 +13,7 @@
 	import Spacing from './radioGroups/Spacing.svelte';
 	import Divider from './radioGroups/Divider.svelte';
 	import ImageUpload from '$lib/components/ImageUpload.svelte';
+	import TaxType from './radioGroups/TaxType.svelte';
 </script>
 
 <aside id="invoice_controls" class="flex w-full flex-col gap-2 px-2">
@@ -80,6 +81,10 @@
 	<div class="mb-4 flex w-full flex-col items-start justify-start gap-2">
 		<p class="text-left text-xs font-normal">Bank Details</p>
 		<Justify disableCenter bind:align={form.bankDetailsAlign} />
+	</div>
+	<div class="mb-4 flex w-full flex-col items-start justify-start gap-2">
+		<p class="text-left text-xs font-normal">Tax Settings</p>
+		<TaxType bind:type={form.taxType} />
 	</div>
 	<form method="POST" class="flex flex-col justify-end gap-y-2" action="?/create" use:enhance>
 		{#each formKeys as key}

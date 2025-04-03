@@ -290,5 +290,6 @@ model InvoiceStyles {
   logoAlt                   String
   logoSrc                   String?
   previewSrc                String?
+  taxType                   String    @default("Tax")
   Invoice                   Invoice[]
 }

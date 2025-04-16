@@ -67,6 +67,10 @@
 		<p class="text-left text-xs font-normal">Recipient Address</p>
 		<Justify disableCenter bind:align={form.recipientAddressAlign} />
 	</div>
+	<label class="mb-4 flex items-center gap-2 text-xs">
+		<input type="checkbox" bind:checked={form.showVATNumber} />
+		Show VAT Numbers
+	</label>
 	<div class="mb-4 flex w-full flex-col items-start justify-start gap-2">
 		<p class="text-left text-xs font-normal">Column Headings</p>
 		<Size bind:size={form.columnHeadingSize} />

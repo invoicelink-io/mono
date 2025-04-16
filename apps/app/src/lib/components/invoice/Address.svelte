@@ -5,6 +5,7 @@
 	export let data: Address;
 	export let align = 'text-left';
 	export let vatNumber: string | null = null;
+	export let showVATNumber: boolean = true;
 </script>
 
 <div class={twMerge('flex w-full flex-col leading-5', align)}>
@@ -15,7 +16,7 @@
 	<span>{data.line3 ?? ''}</span>
 	<span>{data.postalCode}</span>
 	<br />
-	{#if vatNumber}
+	{#if vatNumber && showVATNumber}
 		<span>VAT No. {vatNumber}</span>
 	{/if}
 </div>

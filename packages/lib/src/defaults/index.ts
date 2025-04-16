@@ -38,6 +38,7 @@ export const defaultStyles: InvoiceStyles = {
   logoAlt: "invoicelink.io",
   previewSrc: null,
   taxType: "Tax",
+  showVATNumber: true,
 };
 
 export const defaultLineItem: LineItem = {

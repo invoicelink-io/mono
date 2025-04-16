@@ -291,5 +291,6 @@ model InvoiceStyles {
   logoSrc                   String?
   previewSrc                String?
   taxType                   String    @default("Tax")
+  showVATNumber             Boolean   @default(true)
   Invoice                   Invoice[]
 }
